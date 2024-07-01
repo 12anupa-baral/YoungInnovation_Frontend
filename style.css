@@ -403,7 +403,7 @@
 
 form{
     text-align: left;
-    padding:0rem 16rem 0rem;
+    padding:0rem 1rem 0rem;
     display: flex;
     flex-direction: column;
     gap:0.4rem;
@@ -448,9 +448,10 @@ label{
 .footer__container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     background: linear-gradient(180deg, rgba(0, 41, 83, 0.8) 0%, rgba(0, 45, 91, 0.8) 100%),
     url('Assets/sunset.jpg') no-repeat center center/cover;
-    padding: 8rem;
+    padding: 1rem;
     color: white;
 
 }
@@ -469,7 +470,7 @@ label{
   }
 
   .footer__left{
-    width: 30%;
+    width: 100%;
   }
 
 .footer-right{
@@ -593,6 +594,19 @@ label{
         color: #000;
         font-size: 15px;
     }
+
+    form{
+        padding:0rem 16rem 0rem; 
+    }
+
+    .footer__container{
+        padding: 8rem;
+       
+    }
+
+    .footer__left{
+        width: 30%;
+      }
 
 
 }
