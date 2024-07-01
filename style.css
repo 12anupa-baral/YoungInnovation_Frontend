@@ -215,6 +215,47 @@
     display: none;
 }
 
+/* News */
+.news{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+#news_info {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #667085;
+
+}
+
+#view-more {
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: 0.625rem 1rem 0.625rem;
+    display: inline-block;
+    cursor: pointer; 
+    width: fit-content;
+    margin-left: 45%;
+    background-color: #fff;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+}
+
+.news .card{
+    background-color: #F9F9FF;
+    padding: 1.25rem;
+}
+
+.news .card img{
+    width:19.688rem ;
+    height:12.563rem;
+    border-radius: 1rem;
+}
+
 
 
 
