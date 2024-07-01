@@ -248,6 +248,22 @@
 .news .card{
     background-color: #F9F9FF;
     padding: 1.25rem;
+    
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    
+}
+
+.card-content p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .news .card img{
@@ -256,6 +272,109 @@
     border-radius: 1rem;
 }
 
+.news .card p{
+   color: #505258;
+   font-weight: 400;
+   font-size: 1rem;
+}
+
+/* latest-resources */
+
+.latest-resources{
+    background-color:#F9F9FF;
+    padding:5rem 0rem 5rem;
+}
+.latest-resources{
+    text-align: center;
+
+}
+
+.latest-resources p{
+    color: #7C7D82;
+    line-height: 1.6rem;
+}
+
+.resources__info{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.resource-cards{
+    justify-content: space-between;
+    gap:1rem;
+    
+}
+
+.resource-card{
+    justify-content: space-between;
+    gap:1rem;
+    text-align: left;
+    background-color: white;
+    padding: 1.813rem;
+    border-radius: 1.364rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.resource-card a {
+    text-decoration: none;
+    color: #1D6FA3;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.resource-card p{
+    text-align: left;
+}
+
+.view-resources-button {
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: 0.625rem 1rem 0.625rem;
+    display: inline-block;
+    cursor: pointer; 
+    width: fit-content;
+    background-color: #fff;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    margin-top: 2rem;
+}
+
+.icons{
+    width:fit-content;
+    padding: 1.12rem;
+    border-radius: 1rem;
+}
+
+.tools{
+    display: flex;
+    gap:0.5rem;
+}
+
+#tool{
+    margin-top:1rem;
+}
+
+#icon1{
+    background-color: #F8F1FF;
+    color:#A276FF;
+
+}
+
+#icon2{
+    background-color: #F3F6FF;
+    color:#7291FF;
+    font-size: 1.5rem;
+}
+
+#icon3{
+    background-color: #FAE6E0;
+    color:#FF5400;
+}
 
 
 

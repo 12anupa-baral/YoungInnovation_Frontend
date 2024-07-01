@@ -85,11 +85,11 @@ function renderNews(newsSection, articles) {
   articles.forEach((article) => {
       const articleHTML = `
           <div class="card fade-in">
-              <img  src="${article.image}" alt="${article.title}">
+              <img src="${article.image}" alt="${article.title}">
               <div class="card-content">
                   <h3>${article.title}</h3>
                   <p>${article.content}</p>
-                  <a href="${article.link}" target="_blank">Learn more</a>
+                  <a href="#" class="learn-more">Learn more</a>
               </div>
           </div>
       `;
@@ -97,7 +97,29 @@ function renderNews(newsSection, articles) {
   });
 
   newsSection.innerHTML = newsHTML;
+  addLearnMoreEventListeners();
   fadeElementsOnScroll();
+}
+
+function addLearnMoreEventListeners() {
+  const learnMoreLinks = document.querySelectorAll('.learn-more');
+
+  learnMoreLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const cardContent = event.target.previousElementSibling;
+
+          if (cardContent.style.webkitLineClamp === 'none') {
+              cardContent.style.display = '-webkit-box';
+              cardContent.style.webkitLineClamp = 3;
+              event.target.textContent = 'Learn more';
+          } else {
+              cardContent.style.display = 'block';
+              cardContent.style.webkitLineClamp = 'none';
+              event.target.textContent = 'Show less';
+          }
+      });
+  });
 }
 
 function fadeElementsOnScroll() {
