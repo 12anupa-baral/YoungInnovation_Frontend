@@ -444,6 +444,55 @@ label{
     margin-left: 38%;
 }
 
+/* footer */
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(0, 41, 83, 0.8) 0%, rgba(0, 45, 91, 0.8) 100%),
+    url('Assets/sunset.jpg') no-repeat center center/cover;
+    padding: 8rem;
+    color: white;
+
+}
+
+.footer__container a{
+  text-decoration: none;
+  color: white;
+  
+    
+}
+
+.footer__container li{
+    list-style:none;
+    line-height: 2rem;
+      
+  }
+
+  .footer__left{
+    width: 30%;
+  }
+
+.footer-right{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+
+}
+
+/* footer-content */
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    padding:1rem 0rem 1rem;
+}
+
+.footer-content a{
+    text-decoration: none;
+    color: black;
+    
+      
+  }
+
 
 
 
