@@ -18,7 +18,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
     position: absolute;
     padding: 0.1rem;
     color: white;
@@ -37,15 +36,139 @@
     color: white;
 }
 
-.dropdown-content,
+
 .search-box {
-    /* visibility: hidden; */
     display: none;
 }
 
+
+/* dropdown-content  */
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content.show {
+    width:25.75rem;
+    margin-top: 1rem;
+    display: block;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    border-radius: 0.5rem;
+    padding:2rem;
+    z-index: 2;
+    position: absolute;
+}
+
+
+.dropdown-content a{
+    text-decoration: none;
+    color:#101828;
+    font-weight: 600;
+
+
+}
+
+.dropdown-content p{
+    color:#667085;
+    font-size: 0.875rem;
+    font-weight: 400;
+
+}
+   
 .logo img {
     width: 40%;
 }
+
+
+.dropdown-content .fa{
+    color:#1D6FA3
+}
+
+.dropdown_items{
+    display: flex;
+    gap:1.5rem;
+}
+
+.dropdown_item{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.fa-caret-down{
+    cursor: pointer;
+}
+
+
+
+/* search-box */
+
+.search-icon{
+    cursor:pointer;
+
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-input {
+    padding-left: 30px; 
+}
+
+form .search-icon {
+    position: absolute;
+    left: 25rem; 
+    top: 8.563rem;
+    transform: translateY(-50%);
+    pointer-events: none; 
+    color:#62696F;
+}
+
+.search-input ::placeholder{
+    left: 1rem;
+}
+
+.search-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    padding-top: 6.5rem;
+    z-index: 1;
+}
+
+.search-box input[type="text"] {
+    width:40rem;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+}
+
+.search-box .close {
+    position: absolute;
+    top: 9re.5m;
+    right: 22.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    background-color: white;
+    color:black;
+    border-radius: 100%;
+    padding:0.2rem 0.4rem 0.2rem;
+}
+
+
+
 
 /* hero */
 .hero {

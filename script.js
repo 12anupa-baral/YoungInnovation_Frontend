@@ -1,3 +1,68 @@
+// dropdown
+
+function toggleDropdown(dropdownId) {
+  console.log(`Toggling dropdown with ID: ${dropdownId}`);
+  const dropdown = document.getElementById(dropdownId); 
+  if (dropdown) {
+      dropdown.classList.toggle('show');
+  } else {
+      console.error(`Dropdown element with ID ${dropdownId} not found`);
+  }
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-trigger')) {
+      const dropdowns = document.getElementsByClassName('dropdown-content');
+      for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
+  }
+}
+
+// searchbox
+function showSearchBox() {
+  const searchBox = document.getElementById('search-box');
+  searchBox.classList.add('show');
+}
+
+function hideSearchBox() {
+  const searchBox = document.getElementById('search-box');
+  searchBox.classList.remove('show');
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const searchIcon = document.querySelector('.search-icon');
+  const searchBox = document.getElementById('search-box');
+  const closeBtn = document.querySelector('.search-box .close');
+
+  searchIcon.addEventListener('click', () => {
+      searchBox.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+      searchBox.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target == searchBox) {
+          searchBox.style.display = 'none';
+      }
+  });
+});
+
+function handleSearchSubmit(event) {
+  event.preventDefault(); 
+  searchBox.style.display = 'none'; 
+  window.location.href = '#'; 
+  return false;
+}
+
+
+
+
 //carousel
 
 $(document).ready(function () {

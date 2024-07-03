@@ -30,32 +30,48 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Case Studies</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-trigger" onclick="toggleDropdown('resources')">Resources <i
+                        <a href="#" class="dropdown-trigger" onclick="toggleDropdown('resources-dropdown')">Resources <i
                                 class="fa fa-caret-down"></i></a>
                         <div class="dropdown-content" id="resources-dropdown">
-                            <a href="#"><i class="fa fa-file-alt"></i> Blog <br> <span>The latest industry news, updates
-                                    and info.</span></a>
-                            <a href="#"><i class="fa fa-bolt"></i> Customer stories <br> <span>Learn how our customers
-                                    are making big changes.</span></a>
-                            <a href="#"><i class="fa fa-video"></i> Video tutorials <br> <span>Get up and running on new
-                                    features and techniques.</span></a>
+                            
+                                <div class="dropdown_items">
+                                    <div><i class="fa fa-file-alt"></i></div>
+                                    <div class="dropdown_item">
+                                        <a> Blog </a>
+                                        <p>The latest industry news, updates and info.</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown_items">
+                                    <div><i class="fa fa-bolt"></i></div>
+                                    <div class="dropdown_item">
+                                        <a> Customer stories</a>
+                                        <p>Learn how our
+                                            customers are making big changes.</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown_items">
+                                    <div><i class="fa fa-video"></i></div>
+                                    <div class="dropdown_item">
+                                        <a>Video tutorials </a>
+                                        <p>Get up and running on
+                                            new features and techniques.</p>
+                                    </div>
+                                </div>
                         </div>
                     </li>
                 </ul>
 
             </nav>
         </div>
-
-        <!-- <div class="search-icon">&#128269;</div> -->
         <div class="search-icon"><i class='fa-solid fa-magnifying-glass'></i></div>
     </div>
 
     <!-- Search Box -->
     <div id="search-box" class="search-box">
-        <span class="close">&times;</span>
+        <span class="close"><i class='fa-solid fa-xmark'></i></span>
         <form action="#" onsubmit="return handleSearchSubmit(event)">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
+            <input type="text" placeholder="     Search" class="search-input">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
         </form>
     </div>
 
@@ -190,72 +206,75 @@
 
         <!-- lastest resources section  -->
         <section class="latest-resources">
-            <div class="resources__info"><h2>Latest Resources</h2>
-            <p>The latest resources includes Transparency Toolkit,<br> Evidence, Best Practices</p>
-        </div>
+            <div class="resources__info">
+                <h2>Latest Resources</h2>
+                <p>The latest resources includes Transparency Toolkit,<br> Evidence, Best Practices</p>
+            </div>
             <div class="container">
                 <div class="resource-cards">
                     <div class="resource-card">
                         <!-- <img src="Assets/repair.png" alt="Tool Icon"> -->
                         <div class="tools">
-                        <div class="icons" id="icon1"><i class='fas fa-wrench'></i></div><span id="tool">Tools</span>
+                            <div class="icons" id="icon1"><i class='fas fa-wrench'></i></div><span
+                                id="tool">Tools</span>
+                        </div>
+                        <h3>Defence Elvis</h3>
+                        <p>It allows creating networks of public spending on goods services used in defense in 28 EU
+                            countries...</p>
+                        <a href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h3>Defence Elvis</h3>
-                    <p>It allows creating networks of public spending on goods services used in defense in 28 EU
-                        countries...</p>
-                    <a href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="resource-card">
+                        <div class="icons" id="icon2">
+                            <i class='fa fa-file-text'></i>
+                        </div>
+                        <p>It allows creating networks of public spending on goods services used in defense in 28 EU
+                            countries...</p>
+                        <a href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="icons" id="icon3"><i class='fa-solid fa-check'></i></div>
+                        <h3></h3>
+                        <p>It allows creating networks of public spending on goods services used in defense in 28 EU
+                            countries...</p>
+                        <a href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="resource-card">
-                    <div class="icons" id="icon2">
-                        <i class='fa fa-file-text'></i></div>
-                    <p>It allows creating networks of public spending on goods services used in defense in 28 EU
-                        countries...</p>
-                    <a href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="resource-card">
-                    <div class="icons" id="icon3"><i class='fa-solid fa-check'></i></div>
-                    <h3></h3>
-                    <p>It allows creating networks of public spending on goods services used in defense in 28 EU
-                        countries...</p>
-                    <a href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
             </div>
             <button class="view-resources-button" onclick="window.location.href='index.html'">View all
                 resources</button>
 
         </section>
 
-<div class="container">
-        <!-- contact-us section  -->
-        <section class="contact_us">
-            <div class="contact__info">
-            <h2>Contact Us</h2>
-            <p>If you have any further inquiries, please let us know by<br> filling the form below</p>
+        <div class="container">
+            <!-- contact-us section  -->
+            <section class="contact_us">
+                <div class="contact__info">
+                    <h2>Contact Us</h2>
+                    <p>If you have any further inquiries, please let us know by<br> filling the form below</p>
+                </div>
+                <form>
+                    <div class="name">
+                        <div>
+                            <label for="fname">First name</label>
+                            <input type="text" id="fname" name="fname" />
+                        </div>
+                        <div>
+                            <label for="lname">Last name</label>
+                            <input type="text" id="lname" name="lname" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+            </section>
         </div>
-            <form>
-                <div class="name">
-                    <div>
-                        <label for="fname">First name</label>
-                        <input type="text" id="fname" name="fname" />
-                    </div>
-                    <div>
-                        <label for="lname">Last name</label>
-                        <input type="text" id="lname" name="lname" />
-                    </div>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" />
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
-                <button id="submit" type="submit">Submit</button>
-            </form>
-        </section>
-    </div>
         </section>
 
     </main>
@@ -268,7 +287,7 @@
                 <p>We are a collaboration of non-governmental organizations and professionals working to ensure that
                     government spending </p>
                 <div class="social-icons">
-                    <a href="#"> 
+                    <a href="#">
                         <i class='fa fa-twitter'></i></a>
                     <a href="#"><i class='fab fa-linkedin'></i> </a>
                     <a href="#"><i class='fa fa-youtube-play'></i></a>
