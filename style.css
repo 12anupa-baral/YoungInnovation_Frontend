@@ -49,15 +49,16 @@
 }
 
 .dropdown-content.show {
-    width:25.75rem;
+    width:20rem;
     margin-top: 1rem;
+    margin-left: -14rem;
     display: block;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     gap:1.5rem;
     border-radius: 0.5rem;
-    padding:2rem;
+    padding:1rem;
     z-index: 2;
     position: absolute;
 }
@@ -81,7 +82,6 @@
 .logo img {
     width: 40%;
 }
-
 
 .dropdown-content .fa{
     color:#1D6FA3
@@ -140,14 +140,14 @@ form .search-icon {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     justify-content: center;
     padding-top: 6.5rem;
     z-index: 1;
 }
 
 .search-box input[type="text"] {
-    width:40rem;
+    width:15rem;
     padding: 0.8rem;
     margin: 0.8rem 0;
     border: 1px solid #ccc;
@@ -157,7 +157,7 @@ form .search-icon {
 .search-box .close {
     position: absolute;
     top: 9re.5m;
-    right: 22.5rem;
+    right: 2rem;
     font-size: 1rem;
     cursor: pointer;
     color: white;
@@ -241,8 +241,6 @@ form .search-icon {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-
-
 
 }
 
@@ -660,6 +658,21 @@ label{
 
     .logo img {
         width: 100px;
+    }
+
+    .dropdown-content.show {
+        width:25.75rem;
+        padding:2rem;
+        margin-left: 0rem;
+    }
+
+    .search-box input[type="text"] {
+        width:40rem;
+    }
+
+    .search-box .close {
+        right: 22.5rem;
+        
     }
 
     /* hero */
