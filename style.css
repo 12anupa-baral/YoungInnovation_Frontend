@@ -178,8 +178,8 @@ form .search-icon {
         url('Assets/heroimg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -200,15 +200,24 @@ form .search-icon {
 
 .hero_button {
     border: 1px solid #FFE500;
-    /* background-color:transparent; */
     background-color: rgba(255, 255, 255, .1);
     border-radius: 0.5rem;
     padding: 1rem 1.5rem 1rem;
     color: white;
+    width: fit-content;
 }
 
 .hero_button .fa-solid {
     margin-left: 0.3rem;
+}
+
+.hero_content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* campaign */
@@ -305,6 +314,9 @@ form .search-icon {
 
 .team__info {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
 }
 
 .team__info h4 {
@@ -621,7 +633,6 @@ label{
     justify-content: space-between;
     gap:0.5rem;
    
-
 }
 
 /* footer-content */
@@ -779,9 +790,14 @@ label{
     }
 
     .footer__left{
-        width: 30%;
+        width: 30%;      
         
       }
 
+      .footer-right{
+        gap:5rem;
+       
+    }
+    
 
 }
