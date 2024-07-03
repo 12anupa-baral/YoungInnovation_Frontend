@@ -2,23 +2,23 @@
 
 function toggleDropdown(dropdownId) {
   console.log(`Toggling dropdown with ID: ${dropdownId}`);
-  const dropdown = document.getElementById(dropdownId); 
+  const dropdown = document.getElementById(dropdownId);
   if (dropdown) {
-      dropdown.classList.toggle('show');
+    dropdown.classList.toggle('show');
   } else {
-      console.error(`Dropdown element with ID ${dropdownId} not found`);
+    console.error(`Dropdown element with ID ${dropdownId} not found`);
   }
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.dropdown-trigger')) {
-      const dropdowns = document.getElementsByClassName('dropdown-content');
-      for (let i = 0; i < dropdowns.length; i++) {
-          const openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-          }
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
+    }
   }
 }
 
@@ -39,24 +39,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const closeBtn = document.querySelector('.search-box .close');
 
   searchIcon.addEventListener('click', () => {
-      searchBox.style.display = 'flex';
+    searchBox.style.display = 'flex';
   });
 
   closeBtn.addEventListener('click', () => {
-      searchBox.style.display = 'none';
+    searchBox.style.display = 'none';
   });
 
   window.addEventListener('click', (event) => {
-      if (event.target == searchBox) {
-          searchBox.style.display = 'none';
-      }
+    if (event.target == searchBox) {
+      searchBox.style.display = 'none';
+    }
   });
 });
 
 function handleSearchSubmit(event) {
-  event.preventDefault(); 
-  searchBox.style.display = 'none'; 
-  window.location.href = '#'; 
+  event.preventDefault();
+  searchBox.style.display = 'none';
+  window.location.href = '#';
   return false;
 }
 
@@ -105,15 +105,15 @@ $(document).ready(function () {
 //News API
 async function fetchNews() {
   try {
-      const response = await fetch('https://raw.githubusercontent.com/younginnovations/internship-challenges/master/front-end/news_list.json');
-      if (!response.ok) {
-          throw new Error('Failed to fetch news');
-      }
-      const data = await response.json();
-      return data.news;
+    const response = await fetch('https://raw.githubusercontent.com/younginnovations/internship-challenges/master/front-end/news_list.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch news');
+    }
+    const data = await response.json();
+    return data.news;
   } catch (error) {
-      console.error('Error fetching news:', error);
-      return [];
+    console.error('Error fetching news:', error);
+    return [];
   }
 }
 
@@ -126,21 +126,21 @@ async function displayNews() {
   const newsSection = document.querySelector('.news .cards');
 
   try {
-      if (newsArticles.length === 0) {
-          newsArticles = await fetchNews();
-      }
+    if (newsArticles.length === 0) {
+      newsArticles = await fetchNews();
+    }
 
-      if (!isShowingAllNews) {
-          const initialNews = newsArticles.slice(0, pageSize);
-          renderNews(newsSection, initialNews);
-      } else {
-          renderNews(newsSection, newsArticles);
-      }
+    if (!isShowingAllNews) {
+      const initialNews = newsArticles.slice(0, pageSize);
+      renderNews(newsSection, initialNews);
+    } else {
+      renderNews(newsSection, newsArticles);
+    }
 
-      toggleViewMoreButton();
+    toggleViewMoreButton();
 
   } catch (error) {
-      console.error('Error displaying news:', error);
+    console.error('Error displaying news:', error);
   }
 }
 
@@ -148,7 +148,7 @@ function renderNews(newsSection, articles) {
   let newsHTML = '';
 
   articles.forEach((article) => {
-      const articleHTML = `
+    const articleHTML = `
           <div class="card fade-in">
               <img src="${article.image}" alt="${article.title}">
               <div class="card-content">
@@ -158,7 +158,7 @@ function renderNews(newsSection, articles) {
               </div>
           </div>
       `;
-      newsHTML += articleHTML;
+    newsHTML += articleHTML;
   });
 
   newsSection.innerHTML = newsHTML;
@@ -170,20 +170,20 @@ function addLearnMoreEventListeners() {
   const learnMoreLinks = document.querySelectorAll('.learn-more');
 
   learnMoreLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const cardContent = event.target.previousElementSibling;
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const cardContent = event.target.previousElementSibling;
 
-          if (cardContent.style.webkitLineClamp === 'none') {
-              cardContent.style.display = '-webkit-box';
-              cardContent.style.webkitLineClamp = 3;
-              event.target.textContent = 'Learn more';
-          } else {
-              cardContent.style.display = 'block';
-              cardContent.style.webkitLineClamp = 'none';
-              event.target.textContent = 'Show less';
-          }
-      });
+      if (cardContent.style.webkitLineClamp === 'none') {
+        cardContent.style.display = '-webkit-box';
+        cardContent.style.webkitLineClamp = 3;
+        event.target.textContent = 'Learn more';
+      } else {
+        cardContent.style.display = 'block';
+        cardContent.style.webkitLineClamp = 'none';
+        event.target.textContent = 'Show less';
+      }
+    });
   });
 }
 
@@ -191,25 +191,25 @@ function fadeElementsOnScroll() {
   const newsCards = document.querySelectorAll('.card');
 
   const fadeInObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('fade-in');
-              observer.unobserve(entry.target);
-          }
-      });
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
   }, { threshold: 0.5 });
 
   newsCards.forEach(card => {
-      fadeInObserver.observe(card);
+    fadeInObserver.observe(card);
   });
 }
 
 function toggleViewMoreButton() {
   const viewMoreButton = document.getElementById('view-more');
   if (isShowingAllNews) {
-      viewMoreButton.textContent = 'View Less';
+    viewMoreButton.textContent = 'View Less';
   } else {
-      viewMoreButton.textContent = 'View More';
+    viewMoreButton.textContent = 'View More';
   }
 }
 
@@ -218,6 +218,6 @@ document.getElementById('view-more').addEventListener('click', () => {
   displayNews();
 });
 
-window.onload = async function() {
+window.onload = async function () {
   await displayNews();
 };
