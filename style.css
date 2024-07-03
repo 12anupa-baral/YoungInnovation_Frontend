@@ -272,11 +272,11 @@ form .search-icon {
 }
 
 .card img {
-    width: 22rem;
+    width: fit-content;
     height: 22rem;
     display: block;
     position: relative;
-   
+
 }
 
 .card a {
@@ -399,7 +399,8 @@ form .search-icon {
 }
 
 .news .card img{
-    width:19.688rem ;
+    /* width:19.688rem ; */
+    width: auto;
     height:12.563rem;
     border-radius: 1rem !important;
    
