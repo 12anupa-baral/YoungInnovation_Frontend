@@ -9,6 +9,7 @@
     padding: 1rem;
 }
 
+
 /* Mobile view */
 
 /* navbar */
@@ -150,6 +151,7 @@
     height: 22rem;
     display: block;
     position: relative;
+   
 }
 
 .card a {
@@ -205,9 +207,13 @@
 /* carosel */
 
 .carousel {
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: #F9F9FF;
 
+}
+
+.slick-next {
+    right: 0 !important;
 }
 
 .slick-prev.custom-prev i,
@@ -269,7 +275,8 @@
 .news .card img{
     width:19.688rem ;
     height:12.563rem;
-    border-radius: 1rem;
+    border-radius: 1rem !important;
+    padding-right: 1.25rem;
 }
 
 .news .card p{
@@ -550,6 +557,12 @@ label{
         padding: 6rem 10rem 6rem;
     }
 
+    /* new */
+    .news .card img{
+        padding-right: 0;
+        
+    }
+
     /* team */
     .team {
         flex-wrap: nowrap;
@@ -582,7 +595,7 @@ label{
     .slick-prev.custom-prev {
         left: -30px;
         top: -12px;
-    }
+    } 
 
     .slick-next.custom-next {
         right: -8px;
